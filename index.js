@@ -26,7 +26,7 @@ bot.on('message', (message) => {
     const Alive = message.guild.roles.find("name", 'Alive'); 
     const Host = message.guild.roles.find("name", 'Host');
     const Hosts = message.guild.roles.find("name", "Host").members
-    const Gunes = message.guild.member(Hosts).createDM()
+    
 
     if (!message.content.startsWith(Prefix)) return; 
     if (message.author.bot) return; 
