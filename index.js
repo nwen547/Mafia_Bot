@@ -39,7 +39,7 @@ bot.on('message', (message) => {
         //add more commands by adding else to } ex. }else etc. 
     } else 
  
-    if(message.content.startsWith(config.prefix + "prefix")) {
+    if(message.content.startsWith(Prefix + "prefix")) {
         if(message.author.id !== config.ownerID) {
             return message.channel.send('You don\'t have access to this command!');
         } else 
