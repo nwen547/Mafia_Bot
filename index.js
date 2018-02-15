@@ -37,21 +37,7 @@ bot.on('message', (message) => {
         //message.reply means it @'s author
         //to send message to channel do message.channel.sendMessage('message content'); 
         //add more commands by adding else to } ex. }else etc. 
-    } else 
- 
-    if(message.content.startsWith(Prefix + "prefix")) {
-        if(message.author.id !== config.ownerID) {
-            return message.channel.send('You don\'t have access to this command!');
-        } else 
-        var newPrefix = message.content.split(" ").slice(1, 2)[0]; 
-        config.prefix = newPrefix;  
-        fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
-        console.log(`Prefix Changed! New Prefix is ${newPrefix}`); 
-        //Note: if Prefix is changed for every other command involving it
-        //you must change the split to the new prefix, ie, !players must become
-        //(newprefix)players etc. 
-        //otherwise command will not function correctly!!!!!!!!!!!
-    } else  
+    } else
 
     if(message.content.startsWith(Prefix + "sethost")) {
         if(message.member.roles.find("name", "Host")) { 
