@@ -96,16 +96,16 @@ bot.on('message', (message) => {
                 if(checkActions == false) { 
                     sentActions.unshift(`${message.author.username}`);
                  if(actionsRemaining === 0) {
-                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(config.prefix + 'action').slice(1, 2)[0])}`);
+                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix + 'action').slice(1, 2)[0])}`);
                      systemMessages.send(`All Actions are in! Waiting for Host!`); 
                  } else  
                  if(actionsRemaining === 1) {
-                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(config.prefix +'action').slice(1, 2)[0])}`);
+                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix +'action').slice(1, 2)[0])}`);
                      systemMessages.send(`1 Action Remains!`);
                  } else 
                  if (actionsRemaining > 1){   
                      systemMessages.send(`${actionsRemaining} Actions Remaining!`); 
-                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(config.prefix +'action').slice(1, 2)[0])}`);
+                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix +'action').slice(1, 2)[0])}`);
                  }else
                      message.channel.send('Action Recieved!');
                      console.log("Action Command Used");
@@ -124,11 +124,11 @@ bot.on('message', (message) => {
            var Reveal = Math.floor((Math.random() + 1) * 100);
         message.channel.send(`Host has Recieved your Action!`);   
             if(Reveal >= 51){ 
-            Guns.send(`${message.author.username} shoots ${(message.content.split(config.prefix + 'shoot').slice(1, 2)[0])} and **Reveals Themselves** `);
+            Guns.send(`${message.author.username} shoots ${(message.content.split(Prefix + 'shoot').slice(1, 2)[0])} and **Reveals Themselves** `);
 
             }else    
         if(Reveal <= 50){ 
-            Guns.send(`${message.author.username} shoots ${(message.content.split(config.prefix + 'shoot').slice(1, 2)[0])} and **Remains Hidden** `);
+            Guns.send(`${message.author.username} shoots ${(message.content.split(Prefix + 'shoot').slice(1, 2)[0])} and **Remains Hidden** `);
 
         } else  
              
