@@ -136,7 +136,7 @@ bot.on('message', (message) => {
     if(message.content.startsWith(Prefix + 'shoot')) { 
 
         if(message.member.roles.find("name", "Alive")) { 
-           var Reveal = Math.floor((Math.random() * 100) + 1);
+           var Reveal = Math.floor((Math.random() + 1) * 100);
         message.channel.send(`Host has Recieved your Action!`);   
             if(Reveal >= 51){ 
             Guns.send(`${message.author.username} shoots ${(message.content.split(config.prefix + 'shoot').slice(1, 2)[0])} and **Reveals Themselves** `);
