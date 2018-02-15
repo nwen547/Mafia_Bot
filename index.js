@@ -28,7 +28,7 @@ bot.on('message', (message) => {
     const Hosts = message.guild.roles.find("name", "Host").members
     const Gunes = message.guild.member(Hosts).createDM()
 
-    if (!message.content.startsWith(config.prefix)) return; 
+    if (!message.content.startsWith(Prefix)) return; 
     if (message.author.bot) return; 
     
     if(message.content.startsWith(Prefix + 'ping')) {
@@ -53,7 +53,7 @@ bot.on('message', (message) => {
         //otherwise command will not function correctly!!!!!!!!!!!
     } else  
 
-    if(message.content.startsWith(config.prefix + "sethost")) {
+    if(message.content.startsWith(Prefix + "sethost")) {
         if(message.member.roles.find("name", "Host")) { 
             hostIDs.unshift(`${message.author.id}`) 
             message.channel.send(`Host Set!`) 
@@ -81,7 +81,7 @@ bot.on('message', (message) => {
         } else  
 
     
-        if(message.content.startsWith(config.prefix + 'help')) {
+        if(message.content.startsWith(Prefix + 'help')) {
         message.channel.send('!action Submits action to host')
         message.channel.send('!shoot DM host with target if you have a gun') 
         message.channel.send('!update If you need to change your action use the update command!') 
