@@ -13,7 +13,7 @@ bot.on("ready", ()=> {
    ;
 });
 
- bot.login(process.env.B0T_T0KEN);
+ bot.login(process.env.BOT_TOKEN);
 
 bot.on('guildMemberAdd', member => { 
     const Alive1 = member.guild.roles.find("name", "Alive")
