@@ -119,7 +119,7 @@ bot.on('message', (message) => {
     
 
     if(message.content.startsWith(Prefix + 'shoot')) { 
-        message.channel.send('This Command has been disabled until bugfixing is complete. \nPlease message the host to use your gun!'
+        message.channel.send('This Command has been disabled until bugfixing is complete. \nPlease message the host to use your gun!)'
     }
     
     
