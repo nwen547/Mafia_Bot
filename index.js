@@ -119,21 +119,7 @@ bot.on('message', (message) => {
     
 
     if(message.content.startsWith(Prefix + 'shoot')) { 
-
-        if(message.member.roles.find("name", "Alive")) { 
-           var Reveal = Math.floor((Math.random() + 1) * 100);
-        message.channel.send(`Host has Recieved your Action!`);   
-            if(Reveal >= 51){ 
-            Guns.send(`${message.author.username} shoots ${(message.content.split(Prefix + 'shoot').slice(1, 2)[0])} and **Reveals Themselves** `);
-
-            }else    
-        if(Reveal <= 50){ 
-            Guns.send(`${message.author.username} shoots ${(message.content.split(Prefix + 'shoot').slice(1, 2)[0])} and **Remains Hidden** `);
-
-        } else  
-             
-
-        message.channel.send("You don't have access to this Command!")
+        message.channel.send('This Command has been disabled until bugfixing is complete. \nPlease message the host to use your gun!'
     }
     
     
