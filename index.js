@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const fs = require("fs"); 
 const Prefix = ('!')
 var hostIDs = []; 
-var sentActions = []; 
+var sentActions = ["1","2", "3", "4," "5", "6", "7", "8", "9", "10"]; 
 
 //When Bot Comes Online
 bot.on("ready", ()=> {
@@ -98,16 +98,18 @@ bot.on('message', (message) => {
                  if(actionsRemaining === 0) {
                      actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix + 'action').slice(1, 2)[0])}`);
                      systemMessages.send(`All Actions are in! Waiting for Host!`); 
+                     message.channel.send('Action Recieved!');
                  } else  
                  if(actionsRemaining === 1) {
                      actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix +'action').slice(1, 2)[0])}`);
                      systemMessages.send(`1 Action Remains!`);
+                     message.channel.send('Action Recieved!');
                  } else 
                  if (actionsRemaining > 1){   
                      systemMessages.send(`${actionsRemaining} Actions Remaining!`); 
-                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix +'action').slice(1, 2)[0])}`);
-                 }else
+                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix +'action').slice(1, 2)[0])}`); 
                      message.channel.send('Action Recieved!');
+                 }else
                      console.log("Action Command Used");
  
              } else 
