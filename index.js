@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const fs = require("fs"); 
 const Prefix = ('!')
 var hostIDs = []; 
-var sentActions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l"]; 
+var sentActions = []; 
 
 //When Bot Comes Online
 bot.on("ready", ()=> {
