@@ -96,17 +96,14 @@ bot.on('message', (message) => {
                 if(checkActions == false) { 
                     sentActions.unshift(`${message.author.username}`);
                  if(actionsRemaining === 0) {
-                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix + 'action').slice(1, 2)[0])}`);
-                     systemMessages.send(`All Actions are in! Waiting for Host!`); 
+                     actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix + 'action').slice(1, 2)[0])}`); 
                      message.channel.send('Action Recieved!');
                  } else  
                  if(actionsRemaining === 1) {
                      actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix +'action').slice(1, 2)[0])}`);
-                     systemMessages.send(`1 Action Remains!`);
                      message.channel.send('Action Recieved!');
                  } else 
                  if (actionsRemaining > 1){   
-                     systemMessages.send(`${actionsRemaining} Actions Remaining!`); 
                      actionMessages.send(`${(message.author.username)}: ${(message.content.split(Prefix +'action').slice(1, 2)[0])}`); 
                      message.channel.send('Action Recieved!');
                  }else
