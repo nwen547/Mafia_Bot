@@ -69,9 +69,7 @@ bot.on('message', (message) => {
     
         if(message.content.startsWith(Prefix + 'help')) {
         message.channel.send('!action Submits action to host')
-        message.channel.send('!shoot DM host with target if you have a gun') 
-        message.channel.send('!update If you need to change your action use the update command!') 
-    
+        message.channel.send('!update If you need to change your action use the update command!')
     }else
 
     //These Commands Will take actions. 
