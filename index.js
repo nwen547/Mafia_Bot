@@ -50,8 +50,7 @@ bot.on('message', (message) => {
     }
     
     if(message.content.startsWith(Prefix + "players")) {
-        let aliveID = config.alive;
-        let membersWithRole = message.guild.roles.get(aliveID).members;
+        let membersWithRole = message.guild.roles.find("name", "Alive").members;
         message.channel.send(`${membersWithRole.size} Players Alive!`)
     } else 
    
