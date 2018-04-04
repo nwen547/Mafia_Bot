@@ -113,5 +113,12 @@ bot.on('message', (message) => {
      if(message.content.startsWith(Prefix + 'shoot')) { 
         message.channel.send('This Command has been disabled until bugfixing is complete. Please message the host to use your gun!')
     }  
-    
-}})
+     if(message.content.startsWith(Prefix + 'kms')) {
+         const Alive = message.member.roles.find("name", "Alive"); 
+         const Dead = message.member.roles.find("name", "Ded"); 
+         if(message.member.roles.find("name", "Alive")) {
+             message.member.addRole(Dead) 
+             message.member.removeRole(Alive) 
+         } else 
+         message.channel.send("Dead people can't kill themselves")
+        }}}) 
